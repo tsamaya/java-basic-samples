@@ -9,6 +9,7 @@ public class DiacriticsUtils {
      * Mirror of the unicode table from 00c0 to 017f without diacritics.
      *
      * Code from: http://stackoverflow.com/a/10831704/91226
+     *            http://stackoverflow.com/questions/3322152/
      *
      * Updated to keep french ligatures æ Æ and œ Œ
      */
