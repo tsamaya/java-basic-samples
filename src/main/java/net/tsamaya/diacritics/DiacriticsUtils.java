@@ -15,9 +15,9 @@ public class DiacriticsUtils {
      */
     private static final String tab00c0 =
             "AAAAAAÆCEEEEIIII" +
-            "DNOOOOO\u00d7\u00d8UUUUYI\u00df" +
+            "DNOOOOO\u00d7OUUUUYP\u00df" +
             "aaaaaaæceeeeiiii" +
-            "\u00f0nooooo\u00f7\u00f8uuuuy\u00fey" +
+            "dnooooo\u00f7ouuuuypy" +
             "AaAaAaCcCcCcCcDd" +
             "DdEeEeEeEeEeGgGg" +
             "GgGgHhHhIiIiIiIi" +

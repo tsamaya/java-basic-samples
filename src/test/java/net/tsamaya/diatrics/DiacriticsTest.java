@@ -60,6 +60,18 @@ public class DiacriticsTest {
     }
 
     @Test
+    public void norgeSpecials() {
+        String input = "ø";
+        String actual = DiacriticsUtils.removeDiacritic(input);
+        String actual1 = StringUtils.stripAccents(input);
+        String expected = "ø";
+        // not equal because ø should become o
+        Assert.assertNotEquals(expected, actual);
+        // this is an error
+        Assert.assertEquals(expected, actual1);
+    }
+
+    @Test
     public void russe() {
         String input = "й";
         String actual = DiacriticsUtils.removeDiacritic(input);
