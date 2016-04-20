@@ -1,0 +1,30 @@
+plugins {
+  id "net.saliman.cobertura" version "2.3.1"
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+
+group = 'net.tsamaya'
+version = '1.0-SNAPSHOT'
+
+description = "sandbox"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+     maven {
+         url "https://plugins.gradle.org/m2/"
+     }
+}
+
+dependencies {
+    compile group: 'org.lucee', name: 'commons-codec', version:'1.10.L001'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version:'2.3'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.3'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.4'
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    testRuntime "org.slf4j:slf4j-api:1.7.10"
+}
