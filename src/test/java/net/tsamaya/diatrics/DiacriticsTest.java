@@ -65,9 +65,9 @@ public class DiacriticsTest {
         String actual = DiacriticsUtils.removeDiacritic(input);
         String actual1 = StringUtils.stripAccents(input);
         String expected = "ø";
-        // not equal because ø should become o
+        // not equal because ø become o
         Assert.assertNotEquals(expected, actual);
-        // this is an error
+        // this is an error for the Normalizer
         Assert.assertEquals(expected, actual1);
     }
 
@@ -78,7 +78,28 @@ public class DiacriticsTest {
         String actual1 = StringUtils.stripAccents(input);
         String expected = "й";
         Assert.assertEquals(expected, actual);
-        // fail ! they should be equals
+        // fail for Normalizer! it should be equal
+        Assert.assertNotEquals(expected, actual1);
+    }
+
+    @Test
+    public void majuscules() {
+        String input = "ÂÒÈŒ";
+        String actual = DiacriticsUtils.removeDiacritic(input);
+        String actual1 = StringUtils.stripAccents(input);
+        String expected = "AOEŒ";
+        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual1);
+    }
+
+    @Test
+    public void turkish() {
+        String input = "ılık.barış";
+        String actual = DiacriticsUtils.removeDiacritic(input);
+        String actual1 = StringUtils.stripAccents(input);
+        String expected = "ilik.baris";
+        Assert.assertEquals(expected, actual);
+        // this is an error for the Normalizer
         Assert.assertNotEquals(expected, actual1);
     }
 }

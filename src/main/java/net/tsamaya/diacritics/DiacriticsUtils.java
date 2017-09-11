@@ -11,7 +11,10 @@ public class DiacriticsUtils {
      * Code from: http://stackoverflow.com/a/10831704/91226
      *            http://stackoverflow.com/questions/3322152/
      *
-     * Updated to keep french ligatures æ Æ and œ Œ
+     * useful link for unicode : http://unicode-table.com/
+     *
+     * updated with ligatures Æ æ Œ œ
+     *              ø
      */
     private static final String tab00c0 =
             "AAAAAAÆCEEEEIIII" +
